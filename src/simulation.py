@@ -26,8 +26,8 @@ class Simulation:
             self.lines.append(line)
 
             # masses (cercles)
-            mass1, = self.ax.plot([], [], 'o', color=p.color, markersize=10)
-            mass2, = self.ax.plot([], [], 'o', color=p.color, markersize=10)
+            mass1, = self.ax.plot([], [], 'o', color=p.color, markersize=7)
+            mass2, = self.ax.plot([], [], 'o', color=p.color, markersize=7)
             self.masses.append((mass1, mass2))
 
             # traînées

@@ -2,13 +2,10 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 class DoublePendulum:
-    def __init__(self, L1, L2, angle1, angle2, m1, m2, color, g=9.81):
+    def __init__(self, L1, L2, angle1, angle2, color, g=9.81):
         self.L1 = L1
         self.L2 = L2
-        
-        self.m1 = m1
-        self.m2 = m2
-        
+                
         self.angle1 = angle1
         self.angle2 = angle2
         
