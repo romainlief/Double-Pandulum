@@ -10,14 +10,6 @@ if __name__ == "__main__":
         color="tab:blue",
         g=9.81,
     )
-    pandulum2 = DoublePendulum(
-        L1=1.0,
-        L2=0.7,
-        angle1=1.06465 + 0.01,
-        angle2=1.06465 + 0.01,
-        color="tab:orange",
-        g=9.81,
-    )
 
-    sim = Simulation([pendulum, pandulum2], dt=0.01)
+    sim = Simulation([pendulum], dt=0.005)
     sim.run()
