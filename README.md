@@ -8,14 +8,14 @@ A Python simulation of double pendulums with visualizations using Matplotlib.
 
 To install the required libraries, run the following command:
 
-‘‘‘bash
+```bash
 pip install -r requirements.txt
-‘‘‘
+```
 
 ## Usage
 
 To run the simulation, execute the following command:
 
-‘‘‘bash
+```bash
 cd src && python3 main.py
-‘‘‘
+```
