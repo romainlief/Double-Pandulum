@@ -25,8 +25,9 @@ class Simulation:
         self.lines = []
         self.masses = []
         self.trails = []
+        color_map = ["PuBu", "Wistia"]
 
-        for p in pendulums:
+        for i, p in enumerate(pendulums):
             # segment du pendule
             (line,) = self.ax.plot([], [], lw=3, color=p.color)
             self.lines.append(line)
@@ -39,7 +40,7 @@ class Simulation:
             # traînées
             # utilisation d'un scatter avec une palette 'hsv' pour l'effet arc-en-ciel
             trail = self.ax.scatter(
-                [], [], s=6, c=[], cmap="hsv", vmin=0, vmax=1, alpha=0.8
+                [], [], s=6, c=[], cmap=color_map[i], vmin=0, vmax=1, alpha=0.8
             )
             self.trails.append(trail)
             # init couleurs de la traînée
