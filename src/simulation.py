@@ -15,17 +15,13 @@ class Simulation:
         plt.style.use("dark_background")
         self.fig, self.ax = plt.subplots()
         self.ax.set_aspect("equal")
-        self.ax.set_xlim(
-            -sum(p.L1 + p.L2 for p in pendulums), sum(p.L1 + p.L2 for p in pendulums)
-        )
-        self.ax.set_ylim(
-            -sum(p.L1 + p.L2 for p in pendulums), sum(p.L1 + p.L2 for p in pendulums)
-        )
-
+        r = max(p.L1 + p.L2 for p in pendulums) * 1.1  # marge 10%
+        self.ax.set_xlim(-r, r)
+        self.ax.set_ylim(-r, r)
         self.lines = []
         self.masses = []
         self.trails = []
-        color_map = ["PuBu", "Wistia"]
+        color_map = ["PuBu" for _ in pendulums]  # palette de couleurs pour les traînées
 
         for i, p in enumerate(pendulums):
             # segment du pendule
@@ -99,7 +95,7 @@ class Simulation:
             self.fig,
             self.update_func,
             init_func=self.init_func,
-            frames=1000,
+            frames=1100,
             interval=interval,
             blit=True,
         )
